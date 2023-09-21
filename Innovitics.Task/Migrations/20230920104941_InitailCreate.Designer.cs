@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Innovitics.Task.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230919173001_InitailCreate")]
+    [Migration("20230920104941_InitailCreate")]
     partial class InitailCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,13 +34,11 @@ namespace Innovitics.Task.Migrations
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("CardNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long>("CardNumber")
+                        .HasColumnType("bigint");
 
-                    b.Property<string>("PIN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PIN")
+                        .HasColumnType("int");
 
                     b.HasKey("UserID");
 

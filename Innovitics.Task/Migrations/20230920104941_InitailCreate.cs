@@ -14,8 +14,8 @@ namespace Innovitics.Task.Migrations
                 {
                     UserID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CardNumber = table.Column<long>(type: "bigint", nullable: false),
+                    PIN = table.Column<int>(type: "int", nullable: false),
                     Balance = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>

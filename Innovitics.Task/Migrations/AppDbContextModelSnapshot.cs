@@ -32,13 +32,11 @@ namespace Innovitics.Task.Migrations
                     b.Property<decimal>("Balance")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("CardNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long>("CardNumber")
+                        .HasColumnType("bigint");
 
-                    b.Property<string>("PIN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PIN")
+                        .HasColumnType("int");
 
                     b.HasKey("UserID");
 
